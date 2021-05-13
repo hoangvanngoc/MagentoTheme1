@@ -10,7 +10,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <css src="css/all.min.css"/>
         <script src="js/test.js"/>
-
     </head>
     <body>
         <referenceContainer name="head.additional">
