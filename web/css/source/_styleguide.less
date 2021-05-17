@@ -1,0 +1,327 @@
+& when (@media-common =true) {
+
+    //style default
+    .style-guide {
+        .lib-css(font-family, @font-roboto-regular);
+        .lib-css(font-size, @font-size13);
+        .lib-css(line-height, @size-20px);
+        .lib-css(color, @color-333);
+        .lib-css(display, flex);
+        .lib-css(width, 100%);
+    }
+    .right-wrap,
+    .left-wrap{
+        .lib-css(width, 50%);
+    }
+
+    h1 {
+        .lib-css(font-family, @font-lora-regular);
+        .lib-css(font-size, @font-size32);
+    }
+
+    h2 {
+        .lib-css(font-family, @font-lora-regular);
+        .lib-css(font-size, @font-size24);
+    }
+
+    h3 {
+        .lib-css(font-family, @font-lora-regular);
+        .lib-css(font-size, @font-size18);
+    }
+
+    h4 {
+        .lib-css(font-family, @font-roboto-bold);
+        .lib-css(font-size, @font-size15);
+    }
+
+    a {
+        .lib-css(font-family, @font-roboto-regular);
+        .lib-css(color, @color-333);
+        .lib-css(cursor, pointer);
+
+        &:hover {
+            .lib-css(color, @color-777);
+        }
+    }
+
+    // button
+    button {
+        .lib-css(border-radius, 0);
+        .lib-css(max-width, @size-200);
+        .lib-css(text-transform, uppercase);
+        .lib-css(transition, .2s);
+        .lib-css(height, 40px);
+        .lib-button(@_button-background: @color-green-default,
+            @_button-background-active: @color-green-standard,
+            @_button-font-family: @font-roboto-bold,
+            @_button-color: @color-white,
+            @_button-color-hover: @color-white,
+            @_button-color-active: @color-white,
+            // @_button-border: @size-1px solid @color-green-default,
+            @_button-font-size: @font-size13,
+            @_button-background-hover: @color-green-standard,
+            );
+
+        &.active {
+            background: @color-green-standard;
+        }
+
+        &:visited {
+            background: @color-green-standard;
+            color: @color-white;
+        }
+
+        //standard button
+        &.standard-button,
+        &.action.tocart.primary {
+            .lib-button(@_button-background: @color-white,
+                @_button-color: @color-black,
+                @_button-border: @size-2px solid @color-black,
+                @_button-color-hover: @color-white,
+                @_button-background-hover: @color-black,
+                @_button-font-family: @font-roboto-bold,
+                @_button-color-active: @color-white,
+                @_button-padding: @padding-12-20,
+                @_button-background-active: @color-black);
+        }
+        //standard balck button
+        &.standard-button-black {
+            .standard-button;
+            .lib-button(@_button-background: @color-black,
+                @_button-color: @color-white,
+                @_button-background-hover: @color-white,
+                @_button-color-hover: @color-black,
+                @_button-border: @size-2px solid @color-black)
+        }
+
+        //adjustable button
+        &.button-adjust {
+            .lib-css(height, 40px);
+            .lib-css(width, 40px);
+            .lib-button(@_button-background: @color-white,
+                @_button-color: @color-a9,
+                @_button-color-hover: @color-a9,
+                @_button-background-hover: @color-f8,
+                @_button-font-family: @font-roboto-bold,
+                @_button-color-active: @color-a9,
+                @_button-background-active: @color-f8);
+                @_button-font-size: @font-size20;
+
+            &.active {
+                background: @color-f8;
+            }
+
+            &:visited {
+                background: @color-f8;
+                color: @color-a9;
+            }
+        }
+    }
+
+
+    // input field
+    input,
+    select,
+    textarea {
+        .lib-css(max-width, @size-200);
+        .lib-form-element-color(@_background: @color-white,
+            @_border-color: @color-ddd,
+            @_color: @color-black,
+            @_focus-color: @color-black,
+            @_focus-border-color: @color-ddd);
+    }
+
+    input {
+        &:not([disabled]):focus {
+            .lib-css(box-shadow, none);
+        }
+
+        //input adjust
+        &.input-adjust {
+            .lib-css(margin, 0px -5px);
+            .lib-css(padding-bottom, 4px);
+            .lib-css(line-height, 40px);
+            .lib-css(width, 40px);
+            .lib-css(height, 40px);
+            .lib-css(text-align, center);
+            .lib-css(color, @color-333);
+        }
+
+        // input checkbox
+        &[type='checkbox'] {
+            .appearance(none);
+            .lib-css(width, 20px);
+            .lib-css(height, 20px);
+            .lib-css(background, @color-white);
+            .lib-css(border, 1px solid @color-boder);
+            .lib-css(cursor, pointer);
+            .flex;
+            .flex-justify(center);
+            .align-item(center);
+        }
+        &[type='checkbox']::after{
+            .lib-css(content, "\f00c");
+            .lib-css(font-weight, 600);
+            .lib-css(font-family, "Font Awesome 5 Free");
+            .lib-css(font-size, 14px);
+            .lib-css(color, @color-333);
+            .lib-css(display, none);
+        }
+        &[type='checkbox']:checked::after{
+            .lib-css(display, block);
+        }
+        //radio
+        &[type='radio'] {
+            .appearance(none);
+            .lib-css(width, 20px);
+            .lib-css(height, 20px);
+            .lib-css(background, @color-white);
+            .lib-css(border, 1px solid @color-boder);
+            .lib-css(border-radius, 50%);
+            .lib-css(cursor, pointer);
+            .flex;
+            .flex-justify(center);
+            .align-item(center);
+        }
+        &[type='radio']::after{
+            .lib-css(content, "\f111");
+            .lib-css(font-weight, 600);
+            .lib-css(font-family, "Font Awesome 5 Free");
+            .lib-css(font-size, 8px);
+            .lib-css(color, @color-333);
+            .lib-css(display, none);
+        }
+        &[type='radio']:checked::after{
+            .lib-css(display, block);
+        }
+
+        //input radio
+
+    }
+    .chekbox-radio-disable{
+        &[type='checkbox'] {
+            .lib-css(background, #f4f4f4);
+        }
+        &[type='checkbox']::after{
+            .lib-css(content, "\f00c");
+            .lib-css(font-weight, 600);
+            .lib-css(font-family, "Font Awesome 5 Free");
+            .lib-css(font-size, 14px);
+            .lib-css(color, #ccc);
+        }
+
+        &[type='radio'] {
+            .lib-css(background, #f4f4f4);
+        }
+        &[type='radio']::after{
+            .lib-css(content, "\f111");
+            .lib-css(font-weight, 600);
+            .lib-css(font-family, "Font Awesome 5 Free");
+            .lib-css(font-size, 8px);
+            .lib-css(color, #ccc);
+        }
+    }
+
+    label {
+        .lib-css(cursor, pointer);
+        .lib-css(position, relative);
+    }
+
+    //input text, select
+    input[type=text]{
+        &:focus{
+            .lib-css(box-shadow, 0 0 10px #e3e3e3);
+        }
+    }
+
+    input[type=text],
+    select {
+        .lib-css(box-sizing, border-box);
+        .lib-css(font-size, @font-size13);
+        .lib-css(line-height, @size-30px);
+        .lib-css(color, @color-333);
+        .lib-css(font-family, @font-roboto-regular);
+        .lib-css(text-align, left);
+        .lib-css(padding, 0 @font-size13);
+        .lib-css(margin-bottom, 30px);
+
+        &:not([disabled]):focus,
+        &:focus {
+            .lib-css(box-shadow, none);
+        }
+    }
+
+    input.mage-error,
+    select.mage-error,
+    textarea.mage-error {
+        .lib-css(border-color, @color-red-validate);
+    }
+
+    div.mage-error {
+        .lib-css(color, @color-red9);
+    }
+
+    // alert
+    .message-success {
+        .lib-message(success);
+        .lib-css(background, @color-white);
+        .lib-css(border, solid @size-1px @color-green-message );
+        .lib-css(text-align, center);
+        .lib-css(color, @color-green-message);
+    }
+
+    .message-error {
+        .lib-message(error);
+        .lib-css(background, @color-white);
+        .lib-css(border, solid @size-1px @color-red-validate );
+        .lib-css(text-align, center);
+    }
+
+    // cms block
+    .row {
+        .lib-css(margin, 0 -10px);
+        .lib-css(display, flex);
+
+        .col {
+            .lib-css(margin, 10px);
+            .lib-css(position, relative);
+
+            .col-content {
+                .lib-css(text-align, center);
+                .lib-css(position, absolute);
+                .lib-css(top, 50%);
+                .lib-css(left, 50%);
+                .lib-css(width, 100%);
+                .lib-css(transform, translate(-50%, -50%));
+                .lib-css(text-transform, uppercase);
+
+                a {
+                    .lib-css(font-family, @font-lora-bold);
+                }
+            }
+        }
+
+    }
+
+    //navigation tab
+    .navigation-tab,
+    .product.data.items {
+        .lib-data-tabs(@_tab-control-font-family: @font-roboto-bold,
+            @_tab-control-font-size: @font-size13,
+            @_tab-control-font-weight: @font-weight-700,
+            @_tab-control-line-height: @size-20px,
+            @_tab-control-background-color: @color-f9,
+            @_tab-control-color-active: @color-2d,
+        );
+
+        &.navigation-tab>.item.content,
+        &.product.data.items>.item.content {
+            .lib-css(border, @size-1px solid @color-d1);
+        }
+    }
+
+    // dropdown
+    .example-dropdown-1 {
+        .lib-dropdown();
+    }
+}

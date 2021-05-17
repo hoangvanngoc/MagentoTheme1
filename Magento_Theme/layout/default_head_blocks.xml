@@ -10,9 +10,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <css src="css/all.min.css"/>
         <script src="js/test.js"/>
+        <!-- <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"/> -->
     </head>
     <body>
-        <referenceContainer name="head.additional">
+        <referenceContainer name="content">
 
         </referenceContainer>
     </body>
