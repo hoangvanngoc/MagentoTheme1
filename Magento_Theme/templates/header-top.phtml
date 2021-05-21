@@ -13,7 +13,7 @@
         <?=
             $this->getLayout()
             ->createBlock('Magento\Cms\Block\Block')
-            ->setBlockId('header-midle')
+            ->setBlockId('header-top-mid')
             ->toHtml();
         ?>
     </div>
@@ -27,3 +27,34 @@
         ?>
     </div>
 </div>
+ <!-- mobile -->
+
+ <div class="header-top-wrap__mobile">
+    <div class="header-top-mobile__left">
+        <a class="header-top-mobile-link" href="#">
+            <i class="fas fa-map-marker-alt"></i>
+            <?=
+                $this->getLayout()
+                ->createBlock('Magento\Cms\Block\Block')
+                ->setBlockId('header-top-left-mobile')
+                ->toHtml();
+
+            ?>
+        </a>
+    </div>
+
+    <div class="header-top-mobile__right">
+        <a class="header-top-mobile-link" href="tel:1300 660 330">
+            <i class="fas fa-phone-alt"></i>
+            <?=
+                $this->getLayout()
+                ->createBlock('Magento\Cms\Block\Block')
+                ->setBlockId('header-top-right-mobile')
+                ->toHtml();
+            ?>
+        </a>
+    </div>
+</div>
+
+
+
