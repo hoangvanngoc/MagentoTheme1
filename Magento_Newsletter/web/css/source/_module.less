@@ -1,0 +1,165 @@
+// /**
+//  * Copyright © Magento, Inc. All rights reserved.
+//  * See COPYING.txt for license details.
+//  */
+
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+
+    //  Newsletter subscription
+    .block.newsletter {
+        margin-bottom: 27px;
+
+        .form.subscribe {
+            display: table;
+            width: 100%;
+        }
+
+        .fieldset {
+            display: table-cell;
+            margin: 0;
+            padding: 0;
+            vertical-align: top;
+        }
+
+        .field {
+            margin: 0;
+
+            .control {
+                .lib-icon-font(
+                @icon-envelope,
+                @_icon-font-size: 35px,
+                @_icon-font-line-height: 33px,
+                @_icon-font-color: @form-element-input-placeholder__color
+                );
+                display: block;
+
+                &:before {
+                    position: absolute;
+                    display: none;
+                }
+            }
+        }
+
+        input {
+            margin-right: 35px;
+            padding: 0 0 0 35px; // Reset some default Safari padding values.
+        }
+
+        .title {
+            display: none;
+        }
+
+        .label {
+            &:extend(.abs-visually-hidden all);
+        }
+
+        .actions {
+            display: table-cell;
+            vertical-align: top;
+            width: 1%;
+        }
+
+        .action.subscribe {
+            border-bottom-left-radius: 0;
+            border-top-left-radius: 0;
+            margin-left: -1px;
+        }
+    }
+
+    .block.newsletter {
+        .lib-css(margin-top, 13px);
+        .action.subscribe {
+            border-left: none;
+            position: absolute;
+            border: 0;
+            background-color: transparent;
+            padding: 0;
+            span{
+                display: none;
+            }
+            &::after{
+                content: '\f054';
+                font-family: "Font Awesome 5 Free";
+                font-size: 14px;
+                font-weight: 600;
+                position: absolute;
+                width: 22px;
+                height: 42px;
+                right: -1px;
+                top: 0;
+                .flex;
+                .flex-justify(center);
+                .align-item(center);
+                cursor: pointer;
+                color: @color-icon-social;
+                border-right: 1px solid @color-gray-darken1;
+                 }
+            }
+
+        input {
+            margin-right: 0;
+            width: 340px;
+            height: 42px;
+            border-right: none;
+            padding: 12px;
+        }
+        ::placeholder{
+            color: @color-gray20;
+        }
+
+    }
+    .footer-social{
+        .flex;
+        .flex-justify(center);
+        .align-item(center);
+        margin-bottom: 22px;
+        a{
+            text-decoration: none;
+            margin-right: 30px;
+            font-size: 18px;
+            line-height: 30px;
+            .transition;
+            &:last-child{
+                margin-right: 0;
+            }
+            i{
+                color: @color-icon-social;
+            }
+            &:hover i{
+                color: rgb(14, 217, 231);
+            }
+        }
+    }
+
+}
+
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .block.newsletter {
+        max-width: 44%;
+        width: max-content;
+
+        .field {
+            margin-right: 5px;
+
+            .control {
+                width: 100%;
+            }
+        }
+
+        .action.subscribe {
+            border-radius: 3px;
+        }
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+
+}

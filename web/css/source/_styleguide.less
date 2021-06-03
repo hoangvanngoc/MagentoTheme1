@@ -4,15 +4,15 @@
         width : 100%;
         margin: auto;
         height: auto;
-
+    }
         &__container {
             width : 1440px;
             margin: auto;
-
+        }
             &--header {
                 width           : 100%;
                 height          : 200px;
-                background-color: red;
+                background-color: @_red-color__head;
 
                 .top-header {
                     width : 1440px;
@@ -22,7 +22,7 @@
                         display         : -webkit-flex;
                         width           : 100%;
                         height          : 200px;
-                        background-color: red;
+                        background-color: @_red-color__head;
                         top             : 0;
                         left            : 0;
                         justify-content : center;
@@ -65,7 +65,7 @@
                 width  : 100%;
                 height : auto;
                 display: -webkit-flex;
-
+            }
                 .body-left,
                 .body-right {
                     width: 50%;
@@ -73,104 +73,104 @@
 
                 .body-left {
                     padding-right: 40px;
+                }
 
-                    .button-groups {
-                        margin-top: 66px;
-                        font-family: 'Roboto', sans-serif;
+                 .button-groups {
+                    margin-top: 66px;
+                    font-family: 'Roboto', sans-serif;
+                    .group-title {
+                        h2 {
+                            font-size  : 30px;
+                            color      : #cccccc;
+                            font-weight: 300;
+                            font-family: "Helvetica";
+                        }
+                    }
 
-                        .group-title {
-                            h2 {
-                                font-size  : 30px;
-                                color      : #cccccc;
-                                font-weight: 300;
-                                font-family: "Helvetica";
+                    .first-group,
+                    .second-group {
+                         display: flex;
+                        margin : 5px 0;
+
+                    }
+                    }
+                    .btn {
+                        .btn-child {
+                            text-transform: uppercase;
+                            font-size     : 13px;
+                            font-weight   : 700;
+                            height        : 40px;
+                            width         : 180px;
+                            border        : none;
+                            box-shadow    : 0 0 0 transparent;
+
+                            &:focus {
+                                outline: none;
                             }
                         }
+                    }
 
-                        .first-group,
-                        .second-group {
-                            display: flex;
-                            margin : 5px 0;
+                    .btn-add-to-cart {
+                        .btn-child {
+                            background-color: #22b725;
+                            color           : #fff;
+                            margin          : 0 20px;
 
-                            .btn {
-                                .btn-child {
-                                    text-transform: uppercase;
-                                    font-size     : 13px;
-                                    font-weight   : 700;
-                                    height        : 40px;
-                                    width         : 180px;
-                                    border        : none;
-                                    box-shadow    : 0 0 0 transparent;
-
-                                    &:focus {
-                                        outline: none;
-                                    }
-                                }
+                            &:hover {
+                                background-color: #11ab15;
                             }
+                        }
+                    }
 
-                            .btn-add-to-cart {
-                                .btn-child {
-                                    background-color: #22b725;
-                                    color           : #fff;
-                                    margin          : 0 20px;
+                    .btn-standard {
+                        .btn-child {
+                            width           : 140px;
+                            height          : 40px;
+                            color           : #3b3b3e;
+                            background-color: #fff;
+                            outline-style   : solid;
+                            outline-width   : 2px;
+                            outline-color   : #3b3b3e;
+                            box-shadow      : 0 0 0 transparent;
 
-                                    &:hover {
-                                        background-color: #11ab15;
-                                    }
-                                }
+                            &:hover {
+                                background-color: #3b3b3e;
+                                color           : #fff;
                             }
+                        }
+                    }
 
-                            .btn-standard {
-                                .btn-child {
-                                    width           : 140px;
-                                    height          : 40px;
-                                    color           : #3b3b3e;
-                                    background-color: #fff;
-                                    outline-style   : solid;
-                                    outline-width   : 2px;
-                                    outline-color   : #3b3b3e;
-                                    box-shadow      : 0 0 0 transparent;
+                    .btn-quantity {
+                        display    : flex;
+                        margin-left: 20px;
 
-                                    &:hover {
-                                        background-color: #3b3b3e;
-                                        color           : #fff;
-                                    }
-                                }
-                            }
+                        .minus,
+                        .plus {
+                            width           : 42px;
+                            height          : 42px;
+                            margin          : -1px 0;
+                            background-color: #fff;
+                            border          : 1px solid #e3e3e3;
+                            color           : #a9a9a9;
+                            font-size       : 20px;
+                            border-radius   : 0;
+                            box-shadow      : 0 0 0 transparent;
+                        }
 
-                            .btn-quantity {
-                                display    : flex;
-                                margin-left: 20px;
+                        .field {
+                            width        : 40px;
+                            height       : 40px;
+                            outline-style: solid;
+                            outline-width: .5px;
+                            outline-color: #e3e3e3;
+                            box-shadow   : none;
+                            border-radius: 0;
+                            border       : none;
+                            box-shadow   : 0 0 0 transparent;
+                        }
 
-                                .minus,
-                                .plus {
-                                    width           : 42px;
-                                    height          : 42px;
-                                    margin          : -1px 0;
-                                    background-color: #fff;
-                                    border          : 1px solid #e3e3e3;
-                                    color           : #a9a9a9;
-                                    font-size       : 20px;
-                                    border-radius   : 0;
-                                    box-shadow      : 0 0 0 transparent;
-                                }
-
-                                .field {
-                                    width        : 40px;
-                                    height       : 40px;
-                                    outline-style: solid;
-                                    outline-width: .5px;
-                                    outline-color: #e3e3e3;
-                                    box-shadow   : none;
-                                    border-radius: 0;
-                                    border       : none;
-                                    box-shadow   : 0 0 0 transparent;
-                                }
-
-                                .field[type=text] {
-                                    padding-left: 15px;
-                                }
-                            }
+                        .field[type=text] {
+                            padding-left: 15px;
                         }
                     }
 
@@ -430,7 +430,7 @@
                             line-height     : 50px;
                         }
                     }
-                }
+
 
                 .body-right {
                     padding-left: 40px;
@@ -581,7 +581,7 @@
                         }
                     }
                 }
-            }
-        }
-    }
+
+
+
 }

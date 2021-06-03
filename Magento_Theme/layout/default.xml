@@ -8,10 +8,51 @@
         <referenceBlock remove="true" name="copyright"/>
 
         <referenceContainer name="header.panel" label="Page Header Panel" htmlTag="div" htmlClass="panel header">
-        <block class="Magento\Framework\View\Element\Template" name="header.top" template="Magento_Theme::header-top.phtml"/>
+            <block class="Magento\Framework\View\Element\Template" name="header.top" template="Magento_Theme::header-top.phtml"/>
         </referenceContainer>
          <referenceContainer name="header-wrapper">
-            <block class="Magento\Framework\View\Element\Template" name="minicart.new" after="-" template="Magento_Theme::cart.phtml"/>
+            <!-- <block class="Magento\Framework\View\Element\Template" name="minicart.new"  template="Magento_Theme::cart.phtml"/> -->
+            <!-- <block class="Magento\Framework\View\Element\Template" name="minicart.mobile" after="logo" template="Magento_Theme::mobile-cart.phtml"/> -->
        </referenceContainer>
+       <referenceContainer name="header-wrapper">
+
+       </referenceContainer>
+
+       <referenceContainer name="footer-container">
+          <container name="footer.showroom.container" as="footer-showroom" label="Page Footer" htmlTag="div" htmlClass="footer-showroom">
+               <block class="Magento\Framework\View\Element\Template" name="footer.showroom.block" template="Magento_Theme::footer/showroom.phtml"/>
+          </container>
+
+          <container name="footer.prices.online.container" as="footer-prices-online" label="Page Footer" htmlTag="div" htmlClass="footer-prices-online">
+               <block class="Magento\Framework\View\Element\Template" name="footer.banner.block" template="Magento_Theme::footer/price-online.phtml"/>
+          </container>
+
+          <container name="footer.top.container" as="footer-top" label="Page Footer" htmlTag="div" htmlClass="footer-top">
+               <block class="Magento\Framework\View\Element\Template" name="footer.top.block" template="Magento_Theme::footer/footer-top.phtml"/>
+          </container>
+
+          <container name="footer.middle.container" as="footer-middle" label="Page Footer" htmlTag="div" htmlClass="footer-middle footer-middle-mobile">
+               <block class="Magento\Framework\View\Element\Template" name="footer.middle.block" template="Magento_Theme::footer/footer-middle.phtml"/>
+               <block class="Magento\Framework\View\Element\Template" name="footer.social.block" template="Magento_Theme::footer/footer-social.phtml"/>
+          </container>
+
+          <container name="footer.middle.desktop.container"  as="footer-middle-desktop" label="Page Footer" htmlTag="div" htmlClass="footer-middle footer-middle-desktop">
+               <block class="Magento\Framework\View\Element\Template" name="footer.middle.desktop.block" template="Magento_Theme::footer/footer-middle.phtml"/>
+               <block class="Magento\Framework\View\Element\Template" name="footer.social.desktop.block" template="Magento_Theme::footer/footer-social.phtml"/>
+          </container>
+
+          <container name="footer.bottom.container" as="footer-bottom" label="Page Footer" htmlTag="div" htmlClass="footer-bottom">
+               <block class="Magento\Framework\View\Element\Template" name="footer.bottom.block" template="Magento_Theme::footer/footer-bottom.phtml"/>
+          </container>
+
+          <container name="footer.copy.right.container" as="footer-copy-right" label="Page Footer" htmlTag="div" htmlClass="footer-cpright">
+               <block class="Magento\Framework\View\Element\Template" name="footer.brand.block" template="Magento_Theme::footer/brand.phtml"/>
+          </container>
+       </referenceContainer>
+
+     <move element="form.subscribe" destination="footer.middle.container" before="footer.social.block"/>
+     <move element="footer.middle.desktop.container" destination="footer.bottom.container" after="-"/>
+     <move element="form.subscribe.desktop" destination="footer.middle.desktop.container" before="footer.social.desktop.block"/>
+
     </body>
 </page>

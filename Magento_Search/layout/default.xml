@@ -8,7 +8,8 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceContainer name="header-wrapper">
-            <block class="Magento\Framework\View\Element\Template" name="top.search" as="topSearch" template="Magento_Search::form.mini.phtml" />
+            <block class="Magento\Framework\View\Element\Template"  name="top.search" after="logo" as="topSearch" template="Magento_Search::form.mini.phtml" />
+            <!-- <block class="Magento\Framework\View\Element\Template" name="top.search.mobile" after="-" template="Magento_Search::search-mobile.phtml" /> -->
         </referenceContainer>
     </body>
 </page>

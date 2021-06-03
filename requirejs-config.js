@@ -1,4 +1,3 @@
-
 var config = {
     paths: {
 		'slick': 'js/slick',
