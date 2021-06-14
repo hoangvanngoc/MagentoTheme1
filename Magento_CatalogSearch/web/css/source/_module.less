@@ -59,14 +59,6 @@
             );
             display: inline-block;
             float: right;
-
-            // &.active {
-            //     + .control {
-            //         input {
-            //             position: static;
-            //         }
-            //     }
-            // }
             .lib-css(display, none);
         }
 
@@ -74,7 +66,7 @@
             // border-top: 1px solid @border-color__base;
             clear: both;
             margin: 0 -@layout__width-xs-indent -1px;
-            padding: 0 @layout__width-xs-indent;
+            padding: 0 10px;
         }
 
         input {
@@ -245,7 +237,7 @@
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
     .block-search {
         position: absolute;
-        top: calc(@height-content-mobile - @height-input-search - 5px);
+        top: calc(@height-content-mobile - @height-input-search - 10px);
         left: 15px;
         right: 15px;
     }
@@ -261,8 +253,7 @@
         padding-left: 15px;
         position: relative;
         width: 400px;
-        z-index: 4;
-        margin-top: 7px;
+        margin-top: 20px;
 
         .label {
             &:extend(.abs-visually-hidden-desktop all);

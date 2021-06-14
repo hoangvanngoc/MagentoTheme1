@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+             <referenceBlock name="product.info.details">
+                <referenceBlock name="product.info.description">
+                    <arguments>
+                        <argument name="title" translate="true" xsi:type="string">Description</argument>
+                    </arguments>
+                </referenceBlock>
+
+                <block class="Magento\Catalog\Block\Product\View" name="care.warranty" template="Magento_Catalog::warranty.phtml" group="detailed_info" >
+                    <arguments>
+                        <argument translate="true" name="title" xsi:type="string">Care &amp; warranty</argument>
+                    </arguments>
+                </block>
+
+                <block class="Magento\Catalog\Block\Product\View" name="shipping.delivery" template="Magento_Catalog::delivery.phtml" group="detailed_info" >
+                    <arguments>
+                        <argument translate="true" name="title" xsi:type="string">shipping &amp; delivery</argument>
+                    </arguments>
+                </block>
+                <block class="Magento\Catalog\Block\Product\View" name="installation.requirements" template="Magento_Catalog::installation.phtml" group="detailed_info" >
+                    <arguments>
+                        <argument translate="true" name="title" xsi:type="string">Installation Requirements </argument>
+                    </arguments>
+                </block>
+            </referenceBlock>
+
+            <!-- remove sku -->
+            <referenceBlock name="product.info.sku" remove="true" />
+            <!-- remove review -->
+            <referenceBlock name="reviews.tab" remove="true" />
+            <referenceBlock name="product.review.form" remove="true" />
+            <referenceBlock name="product.info.review" remove="true" />
+            <!-- remove social -->
+            <referenceBlock name="product.info.social" remove="true"/>
+    </body>
+</page>

@@ -10,6 +10,5 @@
       <!-- <referenceBlock  name="minicart"/> -->
       <referenceBlock remove="true" name="footer_links"/>
       <referenceBlock name="minicart" after="top.search"/>
-     <!-- <block class="Magento\Checkout\Block\Cart\Sidebar" name="minicart" as="minicart" after="" template="Magento_Checkout::cart/minicart.phtml"> -->
     </body>
 </page>
