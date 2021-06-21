@@ -5,6 +5,5 @@
     <head>
             <css src="css/all.min.css"/>
             <script src="../web/js/slider-banner.js"></script>
-              <script src="../web/js/write.js"></script>
     </head>
 </page>

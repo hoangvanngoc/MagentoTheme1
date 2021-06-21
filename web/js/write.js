@@ -1,15 +1,14 @@
-var videoPlayer = document.getElementById("videoPlayer");
-var videoModal = document.getElementById("videoModal");
+var acc = document.getElementsByClassName("footer-bottom__click");
+var i;
 
-function stopVideo(){
-    videoPlayer.style.display = 'none';
-    videoModal.style.display = 'none';
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
 }
-function playVideo(){
-    // myVideo.src = file;
-    myVideo.autoplay = true;
-    videoModal.style.display = 'block';
-    videoPlayer.style.display = 'block';
-}
-
-
