@@ -9,6 +9,8 @@
     <body>
       <!-- <referenceBlock  name="minicart"/> -->
       <referenceBlock remove="true" name="footer_links"/>
-      <referenceBlock name="minicart" after="top.search"/>
+      <!-- <referenceBlock name="minicart" after="top.search"/> -->
+
+        <move element="minicart" destination="header-wrapper" after="top.search" />
     </body>
 </page>

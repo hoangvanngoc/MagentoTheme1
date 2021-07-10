@@ -7,11 +7,17 @@
         <referenceBlock remove="true" name="skip_to_content"/>
         <referenceBlock remove="true" name="store_language"/>
         <referenceBlock remove="true" name="top.links"/>
-        <referenceBlock remove="true" name="header.links"/>
+
+         <referenceBlock name="authorization-link">
+            
+         </referenceBlock>
+
+        <!-- <referenceBlock remove="true" name="header.links"/> -->
         <referenceBlock remove="true" name="copyright"/>
 
         <referenceContainer name="header.panel" label="Page Header Panel" htmlTag="div" htmlClass="panel header">
             <block class="Magento\Framework\View\Element\Template" name="header.top" template="Magento_Theme::header-top.phtml"/>
+
         </referenceContainer>
          <referenceContainer name="header-wrapper">
             <!-- <block class="Magento\Framework\View\Element\Template" name="minicart.new"  template="Magento_Theme::cart.phtml"/> -->
