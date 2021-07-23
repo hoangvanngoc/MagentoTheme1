@@ -11,5 +11,6 @@
             <block class="Magento\Newsletter\Block\Subscribe" name="form.subscribe" as="subscribe" before="-" template="Magento_Newsletter::subscribe.phtml" ifconfig="newsletter/general/active"/>
             <block class="Magento\Framework\View\Element\Template"  name="form.subscribe.desktop" as="subscribe-desktop" after="-" template="Magento_Newsletter::subscribe.phtml"/>
         </referenceContainer>
+        <!-- <move element="form.subscribe" destination=""/> -->
     </body>
 </page>

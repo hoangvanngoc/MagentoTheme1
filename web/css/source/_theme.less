@@ -1,51 +1,11 @@
-// set variables
-@font-lora-bold: "Lora-Bold";
-@font-lora-regular: "Lora-Regular";
-@font-roboto-bold: "Roboto-Bold";
-@font-roboto-bold: "Roboto-Bold";
-@font-roboto-regular: "Roboto-Regular";
-@font-roboto-medium: "Roboto-Medium";
-@font-opensans-bold: "OpenSans-Bold";
-@font-Awesome-5-Free: 'Font Awesome 5 Free';
-@font-marketweb-marker: 'Market Web';
+// Font Family Roboto
+@font-family-roboto: "Roboto";
 
-@font-weight-700: 700;
-@font-size200: 200px;
-@font-size60: 60px;
-@font-size48: 48px;
-@font-size32: 32px;
-@font-size24: 24px;
-@font-size18: 18px;
-@font-size16: 16px;
-@font-size15: 15px;
-@font-size13: 13px;
-@font-size12: 12px;
-@font-size20: 20px;
-@size-20px: 20px;
-@size-30px: 30px;
-@size-1px: 1px;
-@size-2px: 2px;
-
-
-@size-200: 200px;
-@padding-12-20: 12px 20px;
-@padding-15: 15px;
-@height-header-top: 36px;
-@height-header-mobile: 150px;
-@height-input-search: 40px;
-@height-btn: 40px;
-@height-content-mobile: 115px;
-@_red-color__head: 36px;
-@height-input-newsleter-desktop: 44px;
-@height-middle-header: 150px;
-@height-section-service: 40px;
-@height-feature-item: 550px;
-@height-feature-img: 356px;
-//// btn
 /// btn showroom
 @width-btn-showroom: 168px;
 @height-btn-showroom: 35px;
 @height-footer-showroom: 205px;
+
 // footer price online
 @height-footer-price-online-mobile: 140px;
 // fooetr-midlle
@@ -65,27 +25,37 @@
 //
 // button primary
 @button-primary__background: @color-green-default;
-@button-primary__hover__background: @color-btn-add-to-cart;
+@button-primary__hover__background: @color-green-standard;
 @button-primary__border: @color-green-default;
-@button-primary__padding: 12px 22px;
+@button-primary__padding: 10px 22px;
+@_button-font-size: 13px;
 @button-primary__hover__border: 0;
 
 // button seconds
-@button__background: @color-btn-3b3b3e;
-@button__color: @color-white;
+@_button-font-family: "Roboto";
+@_button-font-weight: 700;
+@button__background: @color-white;
+@button__color: @color-btn-3b3b3e;
 @button__padding: 10px 20px;
 @button__border: 2px solid @color-btn-3b3b3e;
-@button__hover__color: @color-btn-3b3b3e;
-@button__hover__background: @color-white;
+@button__hover__color: @color-white;
+@button__hover__background: @color-btn-3b3b3e;
 @button__hover__border: 2px solid @color-btn-3b3b3e;
-
+@_button-font-size: 13px;
 //
 // input type
 //
 
 // input text
-// @focus__box-shadow: 3px 3px 5px rgba;
-@form-element-input__padding: 20px 20px;
+@focus__box-shadow:
+  0 0.4px 2.7px rgba(0, 0, 0, 0.008),
+  0 1.1px 6.5px rgba(0, 0, 0, 0.012),
+  0 2px 12.3px rgba(0, 0, 0, 0.015),
+  0 3.6px 21.9px rgba(0, 0, 0, 0.018),
+  0 6.7px 40.9px rgba(0, 0, 0, 0.022),
+  0 16px 98px rgba(0, 0, 0, 0.03)
+;
+@form-element-input__padding: 10px 20px;
 @form-element-input__border: 1px solid @color-ddd;
 @form-element-input__margin: 0 0 5px 0;
 @form-element-input__border-radius: 0;
@@ -94,7 +64,8 @@
 @form-element-validation__border-error: @color-red-validate;
 
 /// slect input
-@form-element-input__height: 45px;
+@form-element-input__height: unset;
+@select__padding: 10px 20px;
 //
 // message
 //
@@ -106,7 +77,7 @@
 @message__border-width: 1px;
 @message-error-icon: '';
 //
-@message__padding: 17px 20px;
+@message__padding: 16px 20px;
 
 // message success
 @message-success__color: @success-color;
@@ -114,9 +85,66 @@
 @message__border-color: @success-color;
 @message-success-icon:'';
 
+// message warning
+@message-warning-icon: "";
+@message-warning__color: @warrning-color;
+@message-warning__background: transparent;
+@message-warning__border-color: @warrning-color;
+///
+// infomation
+//
+@message-info-icon: "";
+@message-info__color: @color-blue1;
+@message-info__background: transparent;
+@message-info__border-color:color-blue1;
+
 //
 @form-field__vertical-indent__desktop: 2px;
 //
-// icon
+
 //
+// check boxx
+//
+@_icon-font-size: 28px;
+@_icon-font-content: '\f07a';
+@_icon-font: "Font Awesome 5 Free";
+// @form-element-choice__type:
+
+@input-checkbox__disabled__opacity: 0.6;
+
+// tab control
+@tab-control__border-color: @color-border;
+@tab-control__background-color: @color-f9;
+@tab-control__font-size: 13px;
+@tab-control__color: @color-a9;
+@tab-control__active__color: @color-2d;
+//
+// heading
+//
+@h1__font-size: 32px;
+@h1__font-size-desktop: 32px;
+@h1__font-family: "Lora";
+@h1__font-color: @color-222222;
+@h1__font-weight: 400;
+@h1__line-height: 42px;
+
+@h2__font-size: 24px;
+@h2__font-family: "Lora";
+@h2__font-weight: 400;
+@h2__font-color: @color-222222;
+
+@h3__font-size: 18px;
+@h3__font-family: "Lora";
+@h3__font-weight: 400;
+@h3__font-color: @color-222222;
+
+@h4__font-size: 15px;
+@h4__font-family: "Roboto";
+@h4__font-weight: 700;
+@h3__font-color: @color-222222;
+
+// link
+@link__color: @color-black_dark;
+@link__hover__color: #9b9b9b;
+
 
