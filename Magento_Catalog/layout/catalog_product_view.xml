@@ -39,6 +39,10 @@
                 </block>
             </referenceBlock>
 
+            <referenceContainer name="product.info.form.content">
+                     <block class="Magento\Catalog\Block\Product\View\Attributes" name="product.attribute.sale" before='-' template="Magento_Catalog::product/view/getAttribute.phtml"/>
+            </referenceContainer>
+
             <!-- remove sku -->
             <referenceBlock name="product.info.sku" remove="true" />
             <!-- remove review -->

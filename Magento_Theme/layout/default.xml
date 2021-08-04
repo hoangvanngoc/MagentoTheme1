@@ -2,14 +2,27 @@
     <head>
           <script src="AHT_magentoTheme1::js/write.js"/>
     </head>
+
+
     <body>
         <referenceBlock remove="true" name="skip_to_content"/>
         <referenceBlock remove="true" name="store_language"/>
-        <!-- <referenceBlock name="header.links" remove="true"/> -->
         <referenceBlock remove="true" name="copyright"/>
 
-         <move element="header.links" destination="header.top.right.container" after="header-top-right"/>
+        <referenceContainer name="header.panel" label="Page Header Panel" htmlTag="div" htmlClass="panel header">
+                <block class="Magento\Framework\View\Element\Template" name="header-top" template="Magento_Theme::header-top.phtml"/>
+        </referenceContainer>
+        <referenceBlock name="header.links">
+                <block class="Magento\Cms\Block\Block" name="social" before='-'>
+                    <arguments>
+                            <argument name="block_id" xsi:type="string" translate="true">header-top-right</argument>
+                    </arguments>
+                </block>
+        </referenceBlock>
 
+        <move element="header.links" destination="header.panel" after="-"/>
+
+         <!-- <move element="header.links" destination="header.top.right.container" after="header-top-right"/>
 
         <referenceContainer name="header.panel" label="Page Header Panel" htmlTag="div" htmlClass="panel header">
             <container name="header.top.wrap" as="header-top-wrap" htmlTag="div" htmlClass="header-top__wrap">
@@ -18,7 +31,7 @@
                      <block class="Magento\Framework\View\Element\Template" name="header-top-right"  template="Magento_Theme::header-top-right.phtml"/>
                 </container>
            </container>
-        </referenceContainer>
+        </referenceContainer> -->
 
          <referenceContainer name="page.top">
             <block class="Magento\Framework\View\Element\Template" name="navigation.sections" before="-" template="Magento_Theme::html/sections.phtml">

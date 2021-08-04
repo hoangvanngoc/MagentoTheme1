@@ -1,0 +1,29 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// phpcs:disable Magento2.Templates.ThisInTemplate.FoundThis
+
+/**
+ * Product additional attributes template
+ *
+ * @var $block \Magento\Catalog\Block\Product\View\Attributes
+ */
+?>
+<?php
+    $_helper = $this->helper(Magento\Catalog\Helper\Output::class);
+    $_product = $block->getProduct();
+?>
+
+<?php if ($_additional = $block->getAdditionalData()) :?>
+            <?php foreach ($_additional as $_data) :?>
+                <?php if (/* @noEscape */ $_helper->productAttribute($_product, $_data['value'], $_data['code'])  == 'sale') { ?>
+                    <span class="attribute-sale-option sale"><?= 'sale' ?></span>
+               <?php } elseif ( /* @noEscape */ $_helper->productAttribute($_product, $_data['value'], $_data['code']) == 'preorder'){ ?>
+                            <span class="attribute-sale-option preorder"><?= 'pre order' ?></span>
+                <?php } ?>
+            <?php endforeach; ?>
+<?php endif;?>
+
